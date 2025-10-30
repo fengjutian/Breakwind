@@ -337,18 +337,20 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(
-      300% 7% at 50.04% 0%,
-      light-dark(#deedfe, #1a2438) 0%,
-      light-dark(#b3d4fe, #0f141f) 69.23%,
-      light-dark(#c9dcfd, #0f141f) 93.37%
-    );
-    background: radial-gradient(
-      300% 7% at 50.04% 0%,
-      light-dark(color(display-p3 0.8807 0.9291 0.9921), color(display-p3 0.102 0.1412 0.2196)) 0%,
-      light-dark(color(display-p3 0.7031 0.8325 0.9963), color(display-p3 0.06 0.08 0.12)) 69.23%,
-      light-dark(color(display-p3 0.7938 0.8654 0.9912), color(display-p3 0.06 0.08 0.12)) 93.37%
-    );
+    // background: #2A7B9B;
+    // background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(9, 237, 104, 1) 0%, rgba(6, 102, 9, 1) 81%);
+    // background: radial-gradient(
+    //   300% 7% at 50.04% 0%,
+    //   light-dark(#deedfe, #1a2438) 0%,
+    //   light-dark(#b3d4fe, #0f141f) 69.23%,
+    //   light-dark(#c9dcfd, #0f141f) 93.37%
+    // );
+    // background: radial-gradient(
+    //   300% 7% at 50.04% 0%,
+    //   light-dark(color(display-p3 0.8807 0.9291 0.9921), color(display-p3 0.102 0.1412 0.2196)) 0%,
+    //   light-dark(color(display-p3 0.7031 0.8325 0.9963), color(display-p3 0.06 0.08 0.12)) 69.23%,
+    //   light-dark(color(display-p3 0.7938 0.8654 0.9912), color(display-p3 0.06 0.08 0.12)) 93.37%
+    // );
     display: flex;
     flex-direction: column;
 
