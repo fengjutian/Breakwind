@@ -180,16 +180,14 @@
     {:else}
       <div class="px py">
         <section class="empty">
-          <h1>What are Breakwind Notes?</h1>
+          <h1>什么是Breakwind笔记？</h1>
 
           <p style="max-width: 50ch;">
-            Breakwind notes are rich text documents that you can create manually or generate using
-            Breakwind's AI from your personal media.<br />
+            Breakwind笔记是富文本文档，您可以手动创建或使用Breakwind的AI从您的个人媒体中生成。<br />
           </p>
 
           <p style="max-width: 48ch;">
-            Jump start a new note by asking Breakwind's AI something in the input box above or
-            create a blank note using the button.
+            通过在上方输入框中向Breakwind的AI提问来快速开始一个新笔记，或者使用按钮创建一个空白笔记。
           </p>
 
           <!-- <Button size="md" onclick={handleUploadFiles}>Import Local Files</Button> -->
