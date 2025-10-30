@@ -48,14 +48,14 @@ export const EXAMPLE_PROMPTS = [
     icon: 'search',
     label: "Why hasn't the computer revolution happened yet?",
     description:
-      "Ask about a topic that's interesting to you, and let Breakwind help you find relevant information.",
+      "询问一个你感兴趣的话题，让Breakwind帮你找到相关信息。",
     prompt: 'Search the web on why the computer revolution has not happened yet'
   },
   {
     id: 'youtube',
     icon: 'message',
     label: 'YouTube Insights',
-    description: 'Open a YouTube video and ask about the details of the content.',
+    description: '打开一个YouTube视频，询问关于内容的详细信息。',
     prompt: 'What did steve say about styluses?',
     url: 'https://www.youtube.com/watch?v=VKpaK670U7s'
   },
@@ -63,7 +63,7 @@ export const EXAMPLE_PROMPTS = [
     id: 'pdf',
     icon: 'file-text-ai',
     label: 'PDF Analysis',
-    description: 'Upload a PDF from your computer and ask for a summary.',
+    description: '上传一个PDF文件到Breakwind，询问关于文件内容的总结。',
     prompt: 'Summarize the key findings and conclusions presented in this document.'
   },
   {
@@ -71,14 +71,14 @@ export const EXAMPLE_PROMPTS = [
     icon: 'mention',
     label: 'Mentioning Sources',
     description:
-      '@mention any of your notebooks, notes, tabs and/or other media to pinpoint various contexts.',
+      '@mention任何你的笔记本、笔记、标签和/或其他媒体来 pinpoint 各种上下文。',
     prompt: ''
   },
   {
     id: 'note',
     icon: 'note',
     label: 'Note Taking',
-    description: 'Compose a note directly in Breakwind.',
+    description: '在Breakwind中直接创作一个笔记。',
     prompt: ''
   }
 ]
