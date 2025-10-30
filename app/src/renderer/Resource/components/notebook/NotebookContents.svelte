@@ -180,10 +180,10 @@
     {:else}
       <div class="px py">
         <section class="empty">
-          <h1>什么是Breakwind笔记？</h1>
+          <h1>什么是 Breakwind 笔记？</h1>
 
           <p style="max-width: 50ch;">
-            Breakwind笔记是富文本文档，您可以手动创建或使用Breakwind的AI从您的个人媒体中生成。<br />
+            Breakwind 笔记是富文本文档，您可以手动创建或使用Breakwind的AI从您的个人媒体中生成。<br />
           </p>
 
           <p style="max-width: 48ch;">
