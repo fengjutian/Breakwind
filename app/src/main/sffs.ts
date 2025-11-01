@@ -1,3 +1,8 @@
+/**
+ * SFFS (Structured File and Folder System) 主模块
+ * 该模块负责管理应用程序的资源存储和检索功能
+ * 提供资源的读取、更新和转换等核心功能
+ */
 import { app } from 'electron'
 import { initBackend } from '../preload/helpers/backend'
 import { isDev } from '@deta/utils/system'
@@ -10,15 +15,30 @@ import type {
 } from '@deta/types'
 import { optimisticParseJSON } from '@deta/utils'
 
+/**
+ * SFFS主类，提供资源管理的核心功能
+ */
 export class SFFSMain {
+  /** SFFS底层接口实例 */
   sffs: any
+  /** 资源管理接口实例 */
   resources: any
 
+  /**
+   * 构造函数
+   * @param sffs SFFS底层接口实例
+   * @param resources 资源管理接口实例
+   */
   constructor(sffs: any, resources: any) {
     this.sffs = sffs
     this.resources = resources
   }
 
+  /**
+   * 将原始复合资源转换为标准资源格式
+   * @param composite 原始复合资源对象
+   * @returns 转换后的标准资源对象
+   */
   static convertCompositeResourceToResource(composite: SFFSRawCompositeResource): SFFSResource {
     return {
       id: composite.resource.id,
@@ -52,6 +72,11 @@ export class SFFSMain {
     }
   }
 
+  /**
+   * 将标准资源转换为原始复合资源格式
+   * @param resource 标准资源对象
+   * @returns 转换后的原始复合资源对象
+   */
   static convertResourceToCompositeResource(resource: SFFSResource): SFFSRawCompositeResource {
     return {
       resource: {
@@ -79,6 +104,11 @@ export class SFFSMain {
     }
   }
 
+  /**
+   * 将原始资源标签转换为标准资源标签格式
+   * @param raw 原始资源标签
+   * @returns 转换后的标准资源标签
+   */
   static convertRawResourceTagToResourceTag(raw: SFFSRawResourceTag): SFFSResourceTag {
     return {
       id: raw.id,
@@ -87,6 +117,12 @@ export class SFFSMain {
     }
   }
 
+  /**
+   * 读取指定ID的资源
+   * @param id 资源ID
+   * @param opts 选项，包括是否包含注释
+   * @returns 返回资源对象，如果不存在则返回null
+   */
   async readResource(
     id: string,
     opts?: { includeAnnotations?: boolean }
@@ -102,6 +138,11 @@ export class SFFSMain {
     return SFFSMain.convertCompositeResourceToResource(composite)
   }
 
+  /**
+   * 更新资源信息
+   * @param resource 要更新的资源对象
+   * @returns 更新操作的结果
+   */
   async updateResource(resource: SFFSRawResource) {
     console.debug('updating resource with id', resource.id, 'data:', resource)
 
@@ -112,8 +153,13 @@ export class SFFSMain {
   }
 }
 
+/** 全局SFFS主实例 */
 let sffsMain: SFFSMain | null = null
 
+/**
+ * 获取SFFS主实例的钩子函数
+ * @returns SFFS主实例，如果未初始化则返回undefined
+ */
 export const useSFFSMain = () => {
   if (!sffsMain) {
     console.error('SFFSMain not initialized')
@@ -123,6 +169,10 @@ export const useSFFSMain = () => {
   return sffsMain
 }
 
+/**
+ * 初始化SFFS主实例
+ * @returns 初始化后的SFFS主实例
+ */
 export const initializeSFFSMain = () => {
   console.log('Initializing SFFSMain...')
   const result = initBackend({
